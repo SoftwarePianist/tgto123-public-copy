@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  tgto123-service:
+    image: walkingd/tgto123:latest
+    container_name: tgto123
+    network_mode: host
+    ports:
+      - '12366:12366'
+    environment:
+      # 必填：代理配置（v2填20172带分流规则的端口，clash填7890端口）
+      - HTTP_PROXY=http://127.0.0.1:7890
+      # 必填：代理配置（v2填20172带分流规则的端口，clash填7890端口）
+      - HTTPS_PROXY=http://127.0.0.1:7890
+      # 必填：时区配置
+      - TZ=Asia/Shanghai
+      # 必填：TG机器人Token（从@BotFather获取）
+      - ENV_TG_BOT_TOKEN=
+      # 必填：TG管理员用户ID（从@userinfobot获取）
+      - ENV_TG_ADMIN_USER_ID=
+      # 必填：WEB配置页面的登录账号
+      - ENV_WEB_PASSPORT=
+      # 必填：WEB配置页面的登录密码
+      - ENV_WEB_PASSWORD=
+    volumes:
+      # 持久化存储db目录
+      - ./db:/app/db
+      # 本地PT文件下载目录（左侧）映射到容器内监控目录（右侧）
+      - /vol2/1000/Video/MoviePilot/transfer:/app/upload
+      # 超过重试次数后将通过CD2上传文件
+      - /vol1/1000/CloudNAS/CloudDrive/123云盘/Ingest/自动归档:/app/transfer
+    restart: always  # 容器退出后自动重启
