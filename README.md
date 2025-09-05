@@ -1,3 +1,5 @@
+# 🎬 一个功能强大的网盘资源自动化管理助手，支持全自动推送每日热更剧集进123网盘，支持全自动监控转存123、115、天翼云盘tg频道分享链接 (tgto123)
+
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.13%2B-blue?style=for-the-badge&logo=python" alt="Python Version">
   <img src="https://img.shields.io/badge/Docker-Ready-blue?style=for-the-badge&logo=docker" alt="Docker Ready">
@@ -6,7 +8,7 @@
 </p>
 
 <p align="center">
-  <strong>一个功能强大的网盘资源自动化管理工具，支持全自动推送每日热更剧集进123网盘，支持全自动监控转存123、115、天翼云盘tg频道分享链接</strong>
+  <strong>一个功能强大的网盘资源自动化管理助手，支持全自动推送每日热更剧集进123网盘，支持全自动监控转存123、115、天翼云盘tg频道分享链接</strong>
 </p>
 
 ---
