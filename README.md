@@ -73,6 +73,8 @@ services:
       - HTTP_PROXY=http://127.0.0.1:7890
       # 代理配置（v2填20172带分流规则的端口，clash填7890端口），若已是全局魔法环境则无需填写
       - HTTPS_PROXY=http://127.0.0.1:7890
+      # 代理配置，以下地址不走代理
+      - NO_PROXY=localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,*.123pan.com,*.115.com,*.189.cn,*.*.189.cn
       # 必填：时区配置
       - TZ=Asia/Shanghai
       # 必填：TG机器人Token（从@BotFather获取）
