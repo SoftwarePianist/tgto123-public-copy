@@ -91,8 +91,6 @@ services:
       - ./db:/app/db
       # 本地PT文件下载目录（左侧）映射到容器内监控目录（右侧）
       - /vol3/1000/Video/MoviePilot/transfer:/app/upload
-      # 超过重试次数后将通过CD2上传文件
-      - /vol1/1000/CloudNAS/CloudDrive/115云盘/Video/待归档影视/MP待归档影视:/app/transfer:rslave
     restart: always  # 容器退出后自动重启
 ```
 
@@ -102,7 +100,6 @@ services:
 - `./db` - 数据库文件和配置信息
 - `./db/logs` - 应用日志文件
 - `./upload` - 本地PT文件下载目录
-- `./transfer` - 超过重试次数后将通过CD2上传文件
 
 ## 💻 使用指南
 
