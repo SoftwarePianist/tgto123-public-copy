@@ -8,10 +8,12 @@ services:
     ports:
       - '12366:12366'
     environment:
-      # 必填：代理配置（v2填20172带分流规则的端口，clash填7890端口）
+      # 代理配置（v2填20172带分流规则的端口，clash填7890端口），若已是全局魔法环境则无需填写
       - HTTP_PROXY=http://127.0.0.1:7890
-      # 必填：代理配置（v2填20172带分流规则的端口，clash填7890端口）
+      # 代理配置（v2填20172带分流规则的端口，clash填7890端口），若已是全局魔法环境则无需填写
       - HTTPS_PROXY=http://127.0.0.1:7890
+      # 代理配置，以下地址不走代理
+      - NO_PROXY=localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,*.123pan.com,*.115.com,*.189.cn,*.*.189.cn,*.quark.cn
       # 必填：时区配置
       - TZ=Asia/Shanghai
       # 必填：TG机器人Token（从@BotFather获取）
@@ -25,8 +27,6 @@ services:
     volumes:
       # 持久化存储db目录
       - ./db:/app/db
-      # 本地PT文件下载目录（左侧）映射到容器内监控目录（右侧）
-      - /vol2/1000/Video/MoviePilot/transfer:/app/upload
-      # 超过重试次数后将通过CD2上传文件
-      - /vol1/1000/CloudNAS/CloudDrive/123云盘/Ingest/自动归档:/app/transfer
+      # 本地PT文件下载目录（左侧）映射到容器内监控目录（右侧），如无需将PT本地文件上传至123，则删去这一行
+      - /vol3/1000/Video/MoviePilot/transfer:/app/upload
     restart: always  # 容器退出后自动重启
