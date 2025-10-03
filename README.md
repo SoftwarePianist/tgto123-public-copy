@@ -24,6 +24,13 @@
 - 开发者不对上述风险导致的任何损失承担责任。
 
 ---
+## Star History  
+
+[![Star History Chart](https://api.star-history.com/svg?repos=walkingddd/tgto123-public&type=Date)](https://star-history.com/#walkingddd/tgto123-public&Date)  
+
+[简体中文](README.md)   
+
+---
 
 ## 🌟 项目特色
 
