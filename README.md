@@ -24,13 +24,6 @@
 - 开发者不对上述风险导致的任何损失承担责任。
 
 ---
-## Star History  
-
-[![Star History Chart](https://api.star-history.com/svg?repos=walkingddd/tgto123-public&type=Date)](https://star-history.com/#walkingddd/tgto123-public&Date)  
-
-[简体中文](README.md)   
-
----
 
 ## 🌟 项目特色
 
@@ -46,6 +39,14 @@
 - 🔄 **后台定时执行** - 123、115、天翼等频道监控转存在后台定时执行，无需人工干预
 - 🔗 **直链生成服务** - 访问 http://127.0.0.1:12366/d/path 即可获取123文件下载直链
 - 💬 **弹幕下载服务** - 支持misaka_danmu_server弹幕服务，当触发302播放时，会自动调用misaka_danmu_server API来下载对应集以及下一集的弹幕
+---
+## Star History  
+
+[![Star History Chart](https://api.star-history.com/svg?repos=walkingddd/tgto123-public&type=Date)](https://star-history.com/#walkingddd/tgto123-public&Date)  
+
+[简体中文](README.md)   
+
+---
 
 ### 🏗️ **技术架构**
 - **后端**: Python + Flask + SQLAlchemy
